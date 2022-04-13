@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>TinDog</title>
+
+  <!-- Google Fonts ubuntu font is closest to tinder font-->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;900&family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS Stylesheets -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!-- Angela says to put the script link here but bootstrap website says script link before </body>
+  here is the script (from bootstrap website) it's boostrap 5 but it doesn't work
+  so I am using bootstrap 4 which is before </body>
+  here is the angela script (from boostrap website)
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+-->
+  <link rel="stylesheet" href="css/styles.css">
+  <!--font awesome icons in buttons-->
+  <script src="https://kit.fontawesome.com/f186875339.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+  <section class="colored-section" id="title">
+
+    <div class="container-fluid"> <!--container-fluid is a bootstrap class-->
+
+      <!-- Nav Bar angela removed the bg-dark that's between navbar and navbar-expand-lg because she didn't want a black navbar -->
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand ms auto" href="">tindog</a>
+        <!--now using ms auto (which can be removed) not the following: ms-3 is makes margin on right side of tindog. p-3 is padding (on all sides), ps-3 is padding from left moves tindog to right-->
+
+        <button class="navbar-toggler me-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span> <!-- button class has me-3 it moves button away from the right of the margin; m-3 also works -->
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+            <!-- ps-3 increases on left side, pe-3 is padding increased on right side,
+            ml-auto (margin left auto) is now ms-auto (margin start auto),
+            increases margin on left side -->
+            <li class="nav-item ms-auto">
+              <!-- can include ms auto in nav-item class but doesn't make a difference because of class 'navbar-nav' has ms-auto -->
+              <!-- mr-auto (margin right) is now me-auto (margin end) -->
+              <a class="nav-link" href="#footer">Contact</a>
+            </li>
+            <li class="nav-item ms-auto">
+              <a class="nav-link" href="#pricing">Pricing</a>
+            </li>
+            <li class="nav-item ms-auto">
+              <a class="nav-link" href="#cta">Download</a>
+            </li>
+          </ul>
+        </div>
+
+      </nav>
+
+      <!-- Title -->
+
+      <div class="row">
+        <!-- angela uses col-lg-6 below -->
+        <div class="col-xl-6">
+          <!-- bootstrap update xxl, xl, lg, md, sm -->
+          <h1 class="big-heading">Meet new and interesting dogs nearby.</h1>
+          <button type="button" class="btn btn-dark btn-lg download-button"><i class="fa-brands fa-apple"></i> Download</button>
+          <button type="button" class="btn btn-outline-light btn-lg download-button"><i class="fa-brands fa-google-play"></i> Download</button>
+        </div>
+        <!--for adjusting the margin of each button, made custom class ("download-button") inside class=btn
+        because the boostrap btn class has the same amount of margin as the < section id=title > -->
+
+        <!-- angela uses col-lg-6 here -->
+        <div class="col-xl-6">
+          <img class="title-image" src="images/iphone6.png" alt="iphone-mockup">
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Features -->
+  <!--class "icon" in each "i class" allows fontawesome icons to change colour-->
+  <section class="white-section" id="features">
+    <div class="container-fluid">
+
+      <div class="row">
+        <!-- need this bootstrap class "row" for class="feature-box" -->
+        <div class="feature-box col-lg-4">
+          <i class="icon fa-solid fa-circle-check fa-4x"></i>
+          <!-- 12 units / 3 class="feature-box" = 4 units in width, aka 1/3rd, for each class="feature-box"-->
+          <h3 class="feature-title">Easy to use.</h3>
+          <p>So easy to use, even your dog could do it.</p>
+        </div>
+
+        <div class="feature-box col-lg-4">
+          <i class="icon fa-solid fa-bullseye fa-4x"></i>
+          <h3 class="feature-title">Elite Clientele</h3>
+          <p>We have all the dogs, the greatest dogs.</p>
+        </div>
+
+        <div class="feature-box col-lg-4">
+          <i class="icon fa-solid fa-heart fa-4x"></i>
+          <h3 class="feature-title">Guaranteed to work.</h3>
+          <p>Find the love of your dog's life or your money back.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Testimonials -->
+  <section class="colored-section" id="testimonials">
+
+    <div id="testimonial-carousel" class="carousel slide" data-bs-ride="false">
+      <div class="carousel-inner">
+        <div class="carousel-item active container-fluid">
+          <h2 class="testimonial-text">I no longer have to sniff other dogs for love. I've found the hottest Corgi on TinDog. Woof.</h2>
+          <img class="testimonial-image" src="images/dog-img.jpg" alt="dog-profile">
+        </div>
+        <div class="carousel-item container-fluid">
+          <h2 class="testimonial-text">My dog used to be lonely, but with TinDog's help, they've found the love of their life. I think.</h2>
+          <img class="testimonial-image" src="images/lady-img.jpg" alt="lady-profile">
+          <em>Beverly, Illinois</em>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonial-carousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonial-carousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+
+
+  </section>
+
+  <!-- Press -->
+  <!-- the media companies below the labrador image -->
+  <!-- alt + drag down provides a single cursor from the sublime style column package -->
+  <!-- section id="press" -->
+  <!-- class="press-logo" changes size of the images -->
+
+  <section class="colored-section" id="press">
+
+    <img class="press-logo" src="images/techcrunch.png" alt="tc-logo">
+    <img class="press-logo" src="images/tnw.png" alt="tnw-logo">
+    <img class="press-logo" src="images/bizinsider.png" alt="biz-insider-logo">
+    <img class="press-logo" src="images/mashable.png" alt="mashable-logo">
+
+  </section>
+
+
+  <!-- Pricing -->
+
+  <section class="white-section" id="pricing">
+
+    <h2 class="section-heading">A Plan for Every Dog's Needs</h2>
+    <p>Simple and affordable price plans for your and your dog.</p>
+    <!-- the 2nd div below div"row" is the grid div. both divs are needed in grid markup in bootstrap5 -->
+    <div class="row">
+      <!--ms-auto me-auto ps-3 pe-3-->
+      <div class="pricing-column col-lg-4 col-md-6">
+        <!--12 units / a third of the width = 4 units per picture
+       12 units / half of the width = 6units -->
+        <div class="card">
+          <div class="card-header">
+            <h3>Chihuahua</h3>
+          </div>
+          <div class="card-body">
+            <h2 class="price-text">Free</h2>
+            <p>5 Matches Per Day</p>
+            <p>10 Messages Per Day</p>
+            <p>Unlimited App Usage</p>
+            <button class="w-100 btn btn-lg btn-outline-dark" type="button">Sign Up</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="pricing-column col-lg-4 col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h3>Labrador</h3>
+          </div>
+          <div class="card-body">
+            <h2 class="price-text">$49 / mo</h2>
+            <p>Unlimited Matches</p>
+            <p>Unlimited Messages</p>
+            <p>Unlimited App Usage</p>
+            <button class="w-100 btn btn-lg btn-dark" type="button">Sign Up</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="pricing-column col-lg-4 col-md-12">
+        <!--12 units / 1 whole = entire 12 units width for 1 picture -->
+        <!-- can also write the above without col-md-12 because any size below lg is %100 width -->
+        <div class="card">
+          <div class="card-header">
+            <h3>Mastiff</h3>
+          </div>
+          <div class="card-body">
+            <h2 class="price-text">$99 / mo</h2>
+            <p>Pirority Listing</p>
+            <p>Unlimited Matches</p>
+            <p>Unlimited Messages</p>
+            <p>Unlimited App Usage</p>
+            <button class="w-100 btn btn-lg btn-dark" type="button">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Call to Action -->
+
+  <section class="colored-section" id="cta">
+    <div class="container-fluid">
+      <h3 class="big-heading">Find the True Love of Your Dog's Life Today.</h3>
+      <button class="btn btn-lg btn-dark download-button" type="button"><i class="fa-brands fa-apple"></i> Download</button>
+      <button class="btn btn-lg btn-light download-button" type="button"><i class="fa-brands fa-google-play"></i> Download</button>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+
+  <footer class="white-section" id="footer">
+    <div class="container-fluid">
+      <i class="social-icon fa-brands fa-facebook-f"></i>
+      <i class="social-icon fa-brands fa-twitter"></i>
+      <i class="social-icon fa-brands fa-instagram"></i>
+      <i class="social-icon fa-solid fa-envelope"></i>
+      <p>© Copyright 2022 TinDog</p>
+    </div>
+  </footer>
+
+
+  <!-- bootstraps 3, 4, and 5 are included below. BS5 is needed for the carousel -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+</body>
+
+</html>

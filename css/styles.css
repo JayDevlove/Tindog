@@ -1,0 +1,251 @@
+body {
+  font-family: "Montserrat";
+  text-align: center;
+  /*text-align center deleted from 7 IDs and classes (on this page)*/
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat";
+  /* insert universal font-weight because Montserrat-Bold does not work*/
+}
+
+/*h2 below was used before angela deleted it and introduced classes for the h1, h2, and h3 (clean coding).
+font-weight is not the same as Angela's h2* and the h2 below is erased
+because of Montserrat-Black and .price-text*/
+/*
+h2 {
+  font-size: 3rem;
+  line-height: 1.5;
+  font-weight:600;
+}
+*/
+/* h3s are now in .feature-title
+h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+*/
+p {
+  color: #8f8f8f;
+}
+
+/* Headings */
+/* the following is an h1 */
+.big-heading {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3.5rem;
+  line-height: 1.5;
+  font-weight: 900;
+}
+
+/* h2 below */
+.section-heading {
+  font-size: 3rem;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+/* Containers */
+.container-fluid {
+  padding: 7% 15%;
+  /*padding top, to left and right, and bottom;*/
+}
+
+/*Sections*/
+/*the following are for determining the background color of each section*/
+.colored-section {
+  background-color: #ff4c68;
+  color: #fff;
+  /*background-color and text color for all text was in <section id="title">
+  but now goes in any section that has class="colored-section"*/
+}
+
+.white-section {
+background-color: #fff;
+}
+
+/* Navigation Bar */
+/* higher level div is .navbar */
+.navbar {
+  padding: 0 0 4.5rem;
+}
+
+/* navbar padding is top (0), left and right (0) and bottom (4.5rem) */
+.navbar-brand {
+  font-family: 'Ubuntu';
+  font-size: 2.5rem;
+  font-weight: normal;
+}
+
+/* space between the 3 words in the navbar */
+.nav-item {
+  padding: 0 18px;
+}
+
+/* changes size of the three words at the top */
+.nav-link {
+  font-size: 1.2rem;
+  font-family: 'Montserrat';
+  font-weight: 100;
+}
+
+/* font-family: 'Montserrat-Light' does not work so used font-weight: 100 */
+/* Download Buttons */
+.download-button {
+  margin: 5% 3% 5% 0;
+}
+
+/* Title Section */
+/*#title is <section id="title"> on the html page*/
+
+/*below will override .container-fluid that is above*/
+/*read below from right to left because there's a
+space between #title (parent) and .container-fluid (child). If they are joined together, then
+it means that the element has both an ID and a class*/
+#title .container-fluid {
+  padding: 3% 15% 7%;
+  text-align: left; /*this will place text on the left side in the parent #title section*/
+}
+
+/* margin order -> top right left bottom according to Angela?!?!? */
+/* Title Image */
+/* iphone image of little dog at the top of page */
+/* before using position absolute in .title-image and position: relative and z-index 1 in #features, width was 60% */
+.title-image {
+  width: 17.5%;
+  transform: rotate(25deg);
+  position: absolute;
+  right: 25%
+    /*moves image from the right*/
+}
+
+/* Features Section */
+/* the blow #features gives padding around itself that centers all three class="feature-box" because they are inside the #features */
+#features {
+  /*padding: 7% 15%; now covered in .container-fluid*/
+  /* background-color is now above in .colored-section */
+  position: relative;
+  z-index: 1;
+  /*z-index can removed because both .title-image and #features are positioned and .title-image is above #features in the html stack*/
+}
+
+.feature-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/*text in each class="feature-box". text-align centers the text and padding makes the text shorter in width*/
+.feature-box {
+  padding: 3%;
+}
+
+/*the below class allows each icon to be styled e.g. colour margin added to give space between icon and text*/
+.icon {
+  color: #ef8172;
+  margin-bottom: 1rem;
+}
+
+/*pseudo-class is called hover*/
+.icon:hover {
+  color: #ff4c68;
+}
+
+/* Testimonial Setion */
+/*padding width is 20% to match angela's (hers is 15%)*/
+#testimonials {
+  background-color: #ef8172;
+  /*color: #fff is now in the above .colored-section*/
+}
+
+/* h2 below */
+.testimonial-text {
+  font-size: 3rem;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+/* border radius makes the image round */
+.testimonial-image {
+  width: 10%;
+  border-radius: 100%;
+  margin: 20px;
+}
+
+/* this padding stops the arrows from squishing into the text - padding was previously in #testimonials above*/
+/* angela deletes below because of .container-fluid (clean code)
+.carousel-item {
+  padding: 7% 15%;
+}
+*/
+
+/* Press Section */
+/*angela has not commented Press Section here*/
+#press {
+  background-color: #ef8172;
+  padding-bottom: 3%;
+}
+
+.press-logo {
+  width: 15%;
+  margin: 20px 20px 50px;
+  /*from the top, from the left and right, from the bottom*/
+}
+
+/* Pricing Section */
+#pricing {
+  padding: 100px;
+}
+
+/* h2 below */
+.price-text {
+  font-size: 3rem;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.pricing-column {
+  padding: 3% 2%;
+}
+
+/* CTA Section below is deleted because it's all in the above .colored-section class*/
+/*#cta {
+  background-color: #ff4c68;
+  color: #fff;
+} */
+/*container-fluid covers padding: 7% 15%; that was in #cta*/
+
+
+/*angela deletes the below css because she changes it
+to .big-heading on html page*/
+/*
+.cta-heading {
+  font-family: "Montserrat";
+  font-weight: bold;
+  font-size: 3.5rem;
+  line-height: 1.5;
+*/
+
+/* Footer Section */
+/*.container-fluid covers this ->#footer {
+  padding: 7% 15%;
+}
+*/
+
+.social-icon {
+  margin: 20px 10px;
+}
+
+/* angela's max-width is 1028px. when viewport is 1257px
+ or smaller we want to change position to static.
+ I have included width here whereas angela doesn't*/
+@media (max-width: 1203px) {
+  #title {
+    text-align: center;
+  }
+
+  .title-image {
+    position: static;
+    width: 45%;
+    transform: rotate(0);
+  }
+}
